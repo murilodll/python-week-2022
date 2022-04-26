@@ -29,7 +29,7 @@ def list_beers(style: Optional[str] = None):
     """Lista as Cervejas"""
     beers = get_beers_from_database()
     table = Table(title="Beerlog")
-    headers = ["id", "name", "style", "cost", "image", "rate", "date",]
+    headers = ["id", "name", "flavor", "style", "cost", "image", "rate", "date",]
     for header in headers:
         table.add_column(header, style="magenta")
     for beer in beers:

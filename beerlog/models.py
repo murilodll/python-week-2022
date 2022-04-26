@@ -26,7 +26,6 @@ class Beer(SQLModel, table=True):
         rate = mean([values["flavor"], values["image"], values["cost"]])
         return int(rate)
 
-
 # try:
 #    brewdog = Beer(name="Brewdog", style="NEIPA", flavor=6, image=8, cost=8)
 # except RuntimeError:
