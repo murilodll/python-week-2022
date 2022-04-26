@@ -24,9 +24,10 @@ class Beer(SQLModel, table=True):
     @validator("rate", always=True)
     def calculate_rate(cls, v, values):
         rate = mean([values["flavor"], values["image"], values["cost"]])
-        return int(rate) 
+        return int(rate)
 
-#try:
+
+# try:
 #    brewdog = Beer(name="Brewdog", style="NEIPA", flavor=6, image=8, cost=8)
-#except RuntimeError:
+# except RuntimeError:
 #    print("Erro, valor invalido")
