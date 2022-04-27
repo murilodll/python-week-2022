@@ -1,0 +1,6 @@
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+source /home/gitpod/.poetry/env
+poetry install
+poetry shell
+Servidor API -> uvicorn beerlog.api:api --reload
+Testes -> poetry add pytest --dev
